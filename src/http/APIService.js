@@ -62,7 +62,7 @@ export class APIService {
 
   }
 
-   addNewInvestment(investment){
+  addNewInvestment(investment){
   const url = `${API_URL}/api/investments/`;
   let jwtToken = localStorage.getItem('token');
   const headers = {Authorization: `jwt ${jwtToken}`};
