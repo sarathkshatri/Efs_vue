@@ -147,10 +147,12 @@
         router.push('/investment-create/' + investment.pk);
       },
       deleteInvestment(investment) {
+        this.loading = true
         apiService.deleteInvestment(investment.pk).then(response => {
           if (response.status === 204) {
             alert("Investment deleted");
             this.showMsg = 'deleted';
+            this.loading = false
              this.getInvestments();
           }
         }).catch(error => {
