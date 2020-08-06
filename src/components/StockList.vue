@@ -148,7 +148,7 @@
           if (response.status === 204) {
             alert("stock deleted");
             this.showMsg = 'deleted';
-            this.$router.push('/stock-list');
+            router.push('/stock-list');
           }
         }).catch(error => {
           if (error.response.status === 401) {

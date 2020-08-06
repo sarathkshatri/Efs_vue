@@ -151,7 +151,7 @@
           if (response.status === 204) {
             alert("Investment deleted");
             this.showMsg = 'deleted';
-            this.$router.push('/investment-list');
+            router.push('/investment-list');
           }
         }).catch(error => {
           if (error.response.status === 401) {
